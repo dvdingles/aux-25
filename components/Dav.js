@@ -6,9 +6,63 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/4D NARIZ.gltf");
+  const { nodes, materials } = useGLTF("/5D NARIZ.gltf");
   return (
     <group {...props} dispose={null}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano.geometry}
+        material={materials["Material.001"]}
+        position={[-0.1, -0.07, 0.12]}
+        rotation={[0, -Math.PI / 2, 0]}
+        scale={0.37}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano001.geometry}
+        material={materials["Material.001"]}
+        position={[-0.1, -0.07, 0.12]}
+        rotation={[0, -Math.PI / 2, 0]}
+        scale={0.37}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano002.geometry}
+        material={materials["Material.001"]}
+        position={[-0.1, -0.07, 0.05]}
+        rotation={[0, -Math.PI / 2, 0]}
+        scale={0.37}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto.geometry}
+        material={materials["Material.001"]}
+        position={[-0.21, -0.15, 0.07]}
+        rotation={[Math.PI / 2, 0, Math.PI / 2]}
+        scale={0.37}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto001.geometry}
+        material={materials["Material.001"]}
+        position={[-0.12, -0.15, -0.03]}
+        rotation={[Math.PI / 2, 0, Math.PI / 2]}
+        scale={0.37}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto002.geometry}
+        material={materials["Material.001"]}
+        position={[-0.2, 0.01, 0.14]}
+        rotation={[Math.PI / 2, 0, Math.PI / 2]}
+        scale={0.37}
+      />
       <group position={[0.1, -0.14, -0.08]} rotation={[0, Math.PI / 2, 0]}>
         <mesh
           castShadow
@@ -93,4 +147,4 @@ export function Dav(props) {
   );
 }
 
-useGLTF.preload("/4D NARIZ.gltf");
+useGLTF.preload("/5D NARIZ.gltf");
